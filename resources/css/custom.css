@@ -1,0 +1,116 @@
+/*albums CSS*/
+albums-container .album {
+	width: 250px;
+	height: 250px;
+	display: inline-block;
+	opacity: 0.8;
+	position: relative;
+	margin: 30px 25px;
+	cursor: pointer;
+}
+albums-container .album:hover {
+	opacity: 1;
+}
+albums-container .album .playButton {
+	display: none;
+	position: absolute;
+	font-size: 5em;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+albums-container .album:hover .playButton{
+	display: inline-block;
+}
+albums-container .album img {
+	position: absolute;
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    transition: all 0.5s;
+    box-shadow: 15px 15px 30px rgba(30,18,84,0.55);
+    border: 2px solid #4527A0;
+    transform: translate(-50%, 0);
+}
+albums-container .album .album-title{
+    display: inline-block;
+    width: 320px;
+    text-align: center;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 20px;
+    color: #512DA8;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #4527A0;
+}
+/*toolbar CSS*/
+toolbar .search-input-label {
+	color: white;
+}
+md-dialog {
+	padding: 15px;
+	width: 500px;
+}
+/*forms CSS*/
+#new-album-form .preview-image  img{
+	border: 3px solid grey;
+	height: 200px;
+    width: 200px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 2px solid #D1C4E9;
+    border-radius: 15px;
+}
+#new-album-form .preview-image {
+	height: 200px;
+    width: 200px;
+    position: absolute;
+    right: 27px;
+    border-radius: 15px;
+    top: 98px;
+    border: 1px solid white;
+    font-size: 25px;
+    font-weight: bold;
+    background: #9575CD;
+    color: darkgray;
+    text-align: center;
+    line-height: 200px;
+}
+#new-album-form .preview-image:before {
+	content: 'Preview Image';
+	transform: rotate(45deg);
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#new-tracks-form md-input-container {
+	margin-top: 25px;
+	margin-bottom: 0;
+}
+/*musicPlayer CSS*/
+#music-player {	
+	position: absolute;
+	display: block;
+	height: 300px;
+	width: 700px;
+	border-radius: 150px;
+	background-color: orange;
+	/*text-align: center;*/
+	left: 50%;
+	top: 100px;
+	transform: translate(-50%, 0);
+}
+#music-player .music-player-image {
+	display: inline-block;
+	height: 250px;
+	width: 250px;
+	border-radius: 50%;
+	margin: 25px;
+
+}

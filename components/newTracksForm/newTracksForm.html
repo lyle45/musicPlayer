@@ -1,0 +1,25 @@
+<form name="newTracksForm" id="new-tracks-form" novalidate>
+	<h3>Add New Tracks To The Album!</h3>
+	<md-divider></md-divider>
+	<md-content layout="row" layout-align="center center" layout-fill layout-margin ng-repeat="track in playlist">
+		<strong> track no' {{$index}}:</strong>
+		<md-input-container flex>
+			<label>Track Name:</label>
+			<input type="text" name="{{$index}}-trackName" ng-model="track.name" ng-required="track.path">
+			<div ng-messages="newTracksForm[$index+'-trackName'].$error">
+				<div ng-message="required">Required if a track url is entered!</div>
+			</div>
+		</md-input-container>
+		<md-input-container flex>
+			<label>Track Url:</label>
+			<input type="url" name="{{$index}}-trackUrl" ng-model="track.path" ng-required="track.name">
+			<div ng-messages="newTracksForm[$index+'-trackUrl'].$error">
+				<div ng-message="required">Required if a track name is entered!</div>
+				<div ng-message="url">Valid mp3 format is needed!</div>
+			</div>
+		</md-input-container>
+	</md-content>
+	<md-button class="md-raised md-primary" ng-click="addNewTrack()">Add More Songs</md-button>
+	<span flex></span>
+	<md-button class="md-raised md-primary" ng-disabled="newTracksForm.$invalid" ng-click="formValidated()">Submit!</md-button>
+</form>

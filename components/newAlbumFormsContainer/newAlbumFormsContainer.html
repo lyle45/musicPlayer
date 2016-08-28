@@ -1,0 +1,2 @@
+<new-album-form ng-if="!newAlbumFormValid" album="album" form-validated="newAlbumFormValidated()"></new-album-form>
+<new-tracks-form ng-if="newAlbumFormValid" playlist="playlist" add-new-track="addSongToPlaylist()" form-validated="submitNewAlbum()"></new-tracks-form>

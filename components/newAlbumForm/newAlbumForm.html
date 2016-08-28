@@ -1,0 +1,35 @@
+<form name="newAlbumForm" id="new-album-form" novalidate>
+	<h2>Add A New Album!</h2>
+	<md-divider></md-divider>
+	<br>
+	<div class="preview-image" layout="row" layout-align="center center" flex>
+		<img ng-src="{{imageURL}}">
+	</div>
+	<md-input-container flex>
+		<label>Album Name</label>
+		<input name="albumName" ng-model="album.name" required/>
+		<div ng-messages="newAlbumForm.albumName.$error" ng-show="newAlbumForm.albumName.$touched">
+			<div ng-message="required">This is required!</div>
+		</div>
+	</md-input-container>
+	<br>
+	<md-input-container flex>
+		<label>Artist Name</label>
+		<input name="artistName" ng-model="album.artist" required></input>
+		<div ng-messages="newAlbumForm.artistName.$error" ng-show="newAlbumForm.artistName.$touched">
+			<div ng-message="required">This is required!</div>
+		</div>
+	</md-input-container>
+	<br>
+	<md-input-container flex>
+		<label>Album's Image URL</label>
+		<input name="imageURL" aria-label="image-url" ng-model="album.image" type="url" required>
+		<div ng-messages="newAlbumForm.imageURL.$error" ng-show="newAlbumForm.imageURL.$touched">
+			<div ng-message="required">This is required!</div>
+			<div ng-message="url">This is url!</div>
+		</div>
+	</md-input-container>
+	<br>
+	<md-button class="md-raised md-primary" ng-disabled="newAlbumForm.$invalid" ng-click="formValidated()">Continue</md-button>
+	<md-button class="md-raised md-primary" ng-disabled="newAlbumForm.$untouched">Reset Fields</md-button>
+</form>
