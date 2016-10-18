@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Music Player</title>
-	<!-- css -->
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
-	<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
-	<link rel="stylesheet" href="bower_components/Arctext.js/css/style.css">
-	<link rel="stylesheet" href="resources/css/custom.css">
+    <title>My Music Player</title>
+    <!-- css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/Arctext.js/css/style.css">
+    <link rel="stylesheet" href="resources/css/custom.css">
 
-	<!-- bower components scripts -->
-	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
-	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-	<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
-	<script type="text/javascript" src="bower_components/angular-aria/angular-aria.js"></script>
-	<script type="text/javascript" src="bower_components/angular-messages/angular-messages.js"></script>
-	<script type="text/javascript" src="bower_components/angular-material/angular-material.js"></script>
-	<script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
-	<script type="text/javascript" src="bower_components/Arctext.js/js/jquery.arctext.js"></script>
-	<!-- angular app.js -->
-	<script type="text/javascript" src="js/app.js"></script>
-	<!-- angular components -->
-	<script type="text/javascript" src="components/toolbar/toolbar.js"></script>
-	<script type="text/javascript" src="components/newAlbumFormsContainer/newAlbumFormsContainer.js"></script>
-	<script type="text/javascript" src="components/newAlbumForm/newAlbumForm.js"></script>
-	<script type="text/javascript" src="components/newTracksForm/newTracksForm.js"></script>
-	<script type="text/javascript" src="components/albumsContainer/albumsContainer.js"></script>
-	<script type="text/javascript" src="components/album/album.js"></script>
-	<!-- angular services -->
-	<script type="text/javascript" src="js/logic/albumsResource.js"></script>
-	<!-- angular directives -->
-	<script type="text/javascript" src="js/logic/arcTextDirective.js"></script>
+    <!-- bower components scripts -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="bower_components/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="bower_components/angular-messages/angular-messages.js"></script>
+    <script type="text/javascript" src="bower_components/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="bower_components/Arctext.js/js/jquery.arctext.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+    <!-- angular app.js -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- angular components -->
+    <script type="text/javascript" src="components/toolbar/toolbar.js"></script>
+    <script type="text/javascript" src="components/newAlbumFormsContainer/newAlbumFormsContainer.js"></script>
+    <script type="text/javascript" src="components/newAlbumForm/newAlbumForm.js"></script>
+    <script type="text/javascript" src="components/newTracksForm/newTracksForm.js"></script>
+    <script type="text/javascript" src="components/albumsContainer/albumsContainer.js"></script>
+    <script type="text/javascript" src="components/album/album.js"></script>
+    <script type="text/javascript" src="components/musicPlayer/musicPlayer.js"></script>
+    <!-- angular services -->
+    <script type="text/javascript" src="js/logic/albumsResource.js"></script>
+    <!-- angular directives -->
+    <script type="text/javascript" src="js/logic/arcTextDirective.js"></script>
 </head>
-<body class="md-padding" ng-app="musicPlayer" >
-	<toolbar></toolbar>
-	<albums-container class="container"></albums-container>
-	<section id="music-player" layout="row" layout-align="start center">
-		<img flex class="music-player-image" src="https://lh3.googleusercontent.com/_K5GbAaXTMkEY0jqyqfOvk_NIKkn6WL_SQcNsQsAxwuWjAWTgSWASFrFRmIluzmqC9I=w300">
-		<i class="fa fa-play playButton"></i>
-	</section>
+<body class="md-padding" ng-app="musicPlayer">
+<toolbar></toolbar>
+<music-player class="animate-if" ng-if="$root.playingAlbum" playing-album="$root.playingAlbum"></music-player>
+<albums-container class="container"></albums-container>
 </body>
 </html>

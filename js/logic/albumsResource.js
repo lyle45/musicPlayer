@@ -1,5 +1,5 @@
 app.service('albumsResource', ['$resource', function($resource){
-	var albumsArray = $resource('http://morad.rocks/player/api/albums').query();
+	var albumsArray = $resource('./data/albums.json').query();
 	return {
 		getAlbums: function() {
 			return albumsArray;
