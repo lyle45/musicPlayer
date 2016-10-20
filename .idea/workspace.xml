@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd2e67ed-6ea6-4863-a376-0e819a9d1af7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/musicPlayer/playerAudio/playerAudio.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/logic/playerService.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unrelated content/JB Project2" afterPath="$PROJECT_DIR$/unrelated content/JB Project2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/albumsContainer/albumsContainer.html" afterPath="$PROJECT_DIR$/components/albumsContainer/albumsContainer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/musicPlayer/musicPlayer.html" afterPath="$PROJECT_DIR$/components/musicPlayer/musicPlayer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/musicPlayer/musicPlayer.js" afterPath="$PROJECT_DIR$/components/musicPlayer/musicPlayer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/newAlbumForm/newAlbumForm.html" afterPath="$PROJECT_DIR$/components/newAlbumForm/newAlbumForm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/newAlbumForm/newAlbumForm.js" afterPath="$PROJECT_DIR$/components/newAlbumForm/newAlbumForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/newAlbumFormsContainer/newAlbumFormsContainer.html" afterPath="$PROJECT_DIR$/components/newAlbumFormsContainer/newAlbumFormsContainer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/newAlbumFormsContainer/newAlbumFormsContainer.js" afterPath="$PROJECT_DIR$/components/newAlbumFormsContainer/newAlbumFormsContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/newTracksForm/newTracksForm.html" afterPath="$PROJECT_DIR$/components/newTracksForm/newTracksForm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/newTracksForm/newTracksForm.js" afterPath="$PROJECT_DIR$/components/newTracksForm/newTracksForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/toolbar/toolbar.html" afterPath="$PROJECT_DIR$/components/toolbar/toolbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/toolbar/toolbar.js" afterPath="$PROJECT_DIR$/components/toolbar/toolbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/albums.json" afterPath="$PROJECT_DIR$/data/albums.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/logic/albumsResource.js" afterPath="$PROJECT_DIR$/js/logic/albumsResource.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/custom.css" afterPath="$PROJECT_DIR$/resources/css/custom.css" />
     </list>
     <ignored path="musicPlayer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -421,7 +403,7 @@
       <workItem from="1476191895673" duration="15391000" />
       <workItem from="1476390164637" duration="49000" />
       <workItem from="1476390232692" duration="24719000" />
-      <workItem from="1476819133154" duration="14454000" />
+      <workItem from="1476819133154" duration="14496000" />
     </task>
     <task id="LOCAL-00001" summary="changes">
       <created>1476756667763</created>
@@ -430,11 +412,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476756667763</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changes">
+      <created>1476989666842</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1476989666842</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59129000" />
+    <option name="totallyTimeSpent" value="59171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -551,6 +540,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="78" selection-start-line="0" selection-start-column="78" selection-end-line="0" selection-end-column="78" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -629,6 +619,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="78" selection-start-line="0" selection-start-column="78" selection-end-line="0" selection-end-column="78" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -750,6 +741,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -757,6 +749,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
