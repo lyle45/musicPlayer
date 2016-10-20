@@ -3,9 +3,11 @@ app.directive('newAlbumForm', function(){
 		scope: {
 			album: '=',
 			formValidated: '&',
+			resetAlbumsForm: '&',
+			imageRegExp: '='
 		},
 		require: '^newAlbumFormsContainer',
 		restrict: 'E',
-		templateUrl: 'components/newAlbumForm/newAlbumForm.html',
+		templateUrl: 'components/newAlbumForm/newAlbumForm.html'
 	};
 });

@@ -1,11 +1,12 @@
-<md-toolbar layout="row" layout-align="start bottom">
-	<div class="md-toolbar-tools">
+<md-toolbar class="md-tall" layout-align="start bottom">
+	<span flex></span>
+	<div class="md-toolbar-tools md-flex" >
 		<md-button class="md-raised" ng-click="addNewAlbumDialog($event)">add album</md-button>
 		<h1>Music Media Player</h1>
 		<span flex></span>
-		<md-input-container layout="row" layout-align="center center">
+		<md-input-container md-theme="docs-dark" layout="row" layout-align="center center">
 			<label class="search-input-label">Search in Albums</label>
-			<input type="search">
+			<input type="search" ng-model="$root.searchAlbum">
 		</md-input-container>
 	</div>
 </md-toolbar>

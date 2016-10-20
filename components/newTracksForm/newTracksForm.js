@@ -3,10 +3,11 @@ app.directive('newTracksForm',  function(){
 		scope: {
 			playlist: '=',
 			addNewTrack: '&',
-			formValidated: '&'
+			formValidated: '&',
+			tracksRegExp: '='
 		},
 		require: '^newAlbumFormsContainer',
 		restrict: 'E',
-		templateUrl: 'components/newTracksForm/newTracksForm.html',
+		templateUrl: 'components/newTracksForm/newTracksForm.html'
 	};
 });

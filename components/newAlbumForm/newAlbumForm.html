@@ -3,11 +3,11 @@
 	<md-divider></md-divider>
 	<br>
 	<div class="preview-image" layout="row" layout-align="center center" flex>
-		<img ng-src="{{imageURL}}">
+		<img ng-src="{{album.album_image}}">
 	</div>
 	<md-input-container flex>
 		<label>Album Name</label>
-		<input name="albumName" ng-model="album.name" required/>
+		<input name="albumName" ng-model="album.album_name" required/>
 		<div ng-messages="newAlbumForm.albumName.$error" ng-show="newAlbumForm.albumName.$touched">
 			<div ng-message="required">This is required!</div>
 		</div>
@@ -15,7 +15,7 @@
 	<br>
 	<md-input-container flex>
 		<label>Artist Name</label>
-		<input name="artistName" ng-model="album.artist" required></input>
+		<input name="artistName" ng-model="album.album_artist" required></input>
 		<div ng-messages="newAlbumForm.artistName.$error" ng-show="newAlbumForm.artistName.$touched">
 			<div ng-message="required">This is required!</div>
 		</div>
@@ -23,13 +23,14 @@
 	<br>
 	<md-input-container flex>
 		<label>Album's Image URL</label>
-		<input name="imageURL" aria-label="image-url" ng-model="album.image" type="url" required>
+		<input name="imageURL" aria-label="image-url" ng-model="album.album_image" ng-pattern="imageRegExp" type="url" required>
 		<div ng-messages="newAlbumForm.imageURL.$error" ng-show="newAlbumForm.imageURL.$touched">
 			<div ng-message="required">This is required!</div>
-			<div ng-message="url">This is url!</div>
+			<div ng-message="url">This needs to be a url!</div>
+			<div ng-message="pattern">This needs to be a valid image url!</div>
 		</div>
 	</md-input-container>
 	<br>
 	<md-button class="md-raised md-primary" ng-disabled="newAlbumForm.$invalid" ng-click="formValidated()">Continue</md-button>
-	<md-button class="md-raised md-primary" ng-disabled="newAlbumForm.$untouched">Reset Fields</md-button>
+	<md-button class="md-raised md-primary" ng-disabled="(newAlbumForm.imageURL.$untouched && newAlbumForm.artistName.$untouched && newAlbumForm.albumName.$untouched)" ng-click="resetAlbumsForm(); ">Reset Fields</md-button>
 </form>

@@ -35,9 +35,9 @@
     <!-- angular directives -->
     <script type="text/javascript" src="js/logic/arcTextDirective.js"></script>
 </head>
-<body class="md-padding" ng-app="musicPlayer">
+<body class="" ng-app="musicPlayer">
 <toolbar></toolbar>
-<music-player class="animate-if" ng-if="$root.playingAlbum" playing-album="$root.playingAlbum"></music-player>
+<music-player ng-if="$root.playingAlbum" playing-album="$root.playingAlbum"></music-player>
 <albums-container class="container"></albums-container>
 </body>
 </html>

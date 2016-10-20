@@ -8,10 +8,15 @@ app.directive('musicPlayer', ['$sce', '$rootScope', function ($sce, $rootScope) 
         link: function ($scope, $elem, $attrs) {
             $scope.audioSource = '';
             $scope.playedTrackIndex = '';
+            $scope.audio = $('audio');
+            $scope.audioPaused = false;
+            $scope.checkIfPaused = function () {
+                $scope.audioPaused = $scope.audio.paused;
+            };
             var albumsContainer = $("albums-container");
             $scope.playSong = function (track) {
                 $scope.playedTrackIndex = $rootScope.playingAlbum.playlist.indexOf(track);
-                $scope.audioSource = $sce.trustAsResourceUrl(track.songUrl);
+                $scope.audioSource = $sce.trustAsResourceUrl(track.song_url);
             };
             $rootScope.$watch('playingAlbum', function(newValue, oldValue){
                 if (newValue) {
@@ -25,8 +30,8 @@ app.directive('musicPlayer', ['$sce', '$rootScope', function ($sce, $rootScope) 
                 });
                 albumsContainer.animate({"top": "0px"}, 500);
             };
-            albumsContainer.animate({"top": "300px"}, 500, function () {
-                $elem.children().animate({"top": "100px"}, 500);
+            albumsContainer.animate({"top": "350px"}, 500, function () {
+                $elem.children().animate({"top": "150px"}, 500);
             })
         }
     }

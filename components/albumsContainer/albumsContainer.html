@@ -1,1 +1,1 @@
-<album ng-repeat="album in albumsArray | orderBy:$index" ng-click=play(album) album="album"></album>
+<album ng-repeat="album in albumsArray | orderBy:$index | filter: $root.searchAlbum" ng-click=play(album) album="album"></album>

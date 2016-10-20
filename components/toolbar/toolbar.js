@@ -14,4 +14,4 @@ app.directive('toolbar',['$mdDialog', function($mdDialog){
 			}
 		}
 	}
-}])
+}]);

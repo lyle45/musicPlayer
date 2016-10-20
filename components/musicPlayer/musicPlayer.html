@@ -1,14 +1,18 @@
 <section id="music-player" layout="row" layout-align="start center">
     <img flex class="music-player-image" ng-src="{{playingAlbum.album_image}}">
-    <div class="play-button-container"><i class="fa fa-play play-button"></i></div>
+    <div class="play-button-container">
+        <i class="fa fa-play play-button" ng-if="audioPaused"></i>
+        <i class="fa fa-pause play-button" ng-if="!audioPaused"></i>
+    </div>
     <i class="fa fa-close closeButton" ng-click="closePlayer()"></i>
     <div class="playing-album-container">
-        <audio ng-src="{{audioSource}}" autoplay="true" controls></audio>
+        <audio ng-src="{{audioSource}}" ng-click="checkIfPaused()" autoplay="true" controls></audio>
         <h4>NOW PLAYING: {{playingAlbum.album_name | uppercase}}</h4>
         <h5>BY: {{playingAlbum.album_artist | uppercase}}</h5>
         <md-list class="playlist-container">
             <md-list-item ng-repeat="track in playingAlbum.playlist" ng-click="playSong(track)">
-                <i class="fa fa-play" ng-if="$index === playedTrackIndex"></i><span ng-if="!($index === playedTrackIndex)">{{$index + 1}}</span>: {{track.songTitle}}
+                <i class="fa fa-play" ng-if="$index === playedTrackIndex"></i><span
+                    ng-if="!($index === playedTrackIndex)">{{$index + 1}}</span>: {{track.song_title}}
             </md-list-item>
         </md-list>
     </div>

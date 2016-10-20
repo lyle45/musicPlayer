@@ -1,5 +1,5 @@
 var app = angular.module('musicPlayer', ['ngMaterial', 'ngMessages', 'ngResource', 'ngAnimate'])
-app.config(['$httpProvider', function ($httpProvider) {
+app.config(['$httpProvider', '$mdThemingProvider', function ($httpProvider, $mdThemingProvider) {
     $httpProvider.interceptors.push(function () {
         return {
             request: function (config) {
@@ -16,4 +16,8 @@ app.config(['$httpProvider', function ($httpProvider) {
             }
         }
     })
+    $mdThemingProvider.theme('docs-dark', 'default')
+        .primaryPalette('grey')
+        .dark();
+    // $mdThemingProvider.setDefaultTheme('docs-dark')
 }]);

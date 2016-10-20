@@ -54,9 +54,9 @@ albums-container .album .album-title {
     left: 50%;
     transform: translate(-50%, 0);
     font-size: 20px;
-    color: #512DA8;
+    color: rgba(120, 93, 168, 0.47);
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #4527A0;
+    -webkit-text-stroke-color: rgba(69, 39, 160, 0.07);
 }
 
 /*toolbar CSS*/
@@ -76,7 +76,7 @@ md-dialog {
     position: absolute;
     right: 0;
     top: 0;
-    border: 2px solid #D1C4E9;
+    border: 2px solid #cb91e9;
     border-radius: 15px;
 }
 
@@ -90,7 +90,7 @@ md-dialog {
     border: 1px solid white;
     font-size: 25px;
     font-weight: bold;
-    background: #b098cd;
+    background: #af8bcd;
     color: darkgray;
     text-align: center;
     line-height: 200px;
@@ -116,7 +116,7 @@ md-dialog {
     height: 300px;
     width: 700px;
     border-radius: 150px;
-    background-color: orange;
+    background-color: rgba(70, 44, 85, 0.4);
     text-align: center;
     left: 50%;
     top: -450px;
@@ -153,8 +153,8 @@ md-dialog {
     height: 80px;
     width: 80px;
     display: inline-block;
-    top: 37%;
-    left: 16%;
+    top: 36%;
+    left: 13%;
     position: absolute;
 }
 
@@ -190,26 +190,12 @@ md-dialog {
 }
 
 #music-player .playlistTrack a {
-    background-color: #927bd2;
+    background-color: #1c162d;
     color: lightgrey;
     display: block;
     height: 25px;
     width: 50px;
 }
-
-#music-player.animate-if.ng-enter, .animate-if.ng-leave {
-    /*animation-name: foldPlayer;*/
-    /*animation-duration: 4000ms;*/
-    /*transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;*/
-}
-/*@keyframes foldPlayer {*/
-    /*from {*/
-        /*height:0;*/
-    /*}*/
-    /*to {*/
-        /*height:300px;*/
-    /*}*/
-/*}*/
 
 #music-player .closeButton {
     font-size: 40px;

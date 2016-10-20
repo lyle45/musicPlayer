@@ -5,17 +5,18 @@
 		<strong> track no' {{$index}}:</strong>
 		<md-input-container flex>
 			<label>Track Name:</label>
-			<input type="text" name="{{$index}}-trackName" ng-model="track.name" ng-required="track.path">
+			<input type="text" name="{{$index}}-trackName" ng-model="track.song_title" ng-required="track.song_url || $first">
 			<div ng-messages="newTracksForm[$index+'-trackName'].$error">
-				<div ng-message="required">Required if a track url is entered!</div>
+				<div ng-message="required">Required if a track url is entered or only track in the list!!</div>
 			</div>
 		</md-input-container>
 		<md-input-container flex>
 			<label>Track Url:</label>
-			<input type="url" name="{{$index}}-trackUrl" ng-model="track.path" ng-required="track.name">
+			<input type="url" name="{{$index}}-trackUrl" ng-model="track.song_url" ng-required="track.song_title || $first" ng-pattern="tracksRegExp">
 			<div ng-messages="newTracksForm[$index+'-trackUrl'].$error">
-				<div ng-message="required">Required if a track name is entered!</div>
-				<div ng-message="url">Valid mp3 format is needed!</div>
+				<div ng-message="required">Required if a track name is entered or only track in the list!</div>
+				<div ng-message="url">This needs to be a url!</div>
+				<div ng-message="pattern">This needs to be a valid mp3 url!</div>
 			</div>
 		</md-input-container>
 	</md-content>
