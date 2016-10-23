@@ -7,7 +7,7 @@ app.directive('album',['$rootScope', function($rootScope){
 		templateUrl: 'components/albumsContainer/album/album.html',
 		link: function ($scope, $elem, $attrs) {
 			$scope.play = function() {
-				$rootScope.playingAlbum = scope.album;
+				$rootScope.playingAlbum = $scope.album;
 			}
 		}
 	};
