@@ -129,7 +129,7 @@ md-dialog {
     width: 250px;
     border-radius: 50%;
     margin: 25px;
-    right: 195px;
+    right: 175px;
     position: relative;
 
     animation-name: spin;
@@ -146,6 +146,12 @@ md-dialog {
         transform: rotate(360deg);
     }
 }
+#music-player .music-player-image.paused{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused;
+    animation-play-state:paused;
+}
 
 #music-player .play-button-container {
     background-color: white;
@@ -154,16 +160,16 @@ md-dialog {
     width: 80px;
     display: inline-block;
     top: 36%;
-    left: 13%;
+    left: 17%;
     position: absolute;
 }
 
 #music-player .play-button {
     display: block;
     position: absolute;
-    font-size: 5em;
+    font-size: 4em;
     top: 50%;
-    left: 60%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 

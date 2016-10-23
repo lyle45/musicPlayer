@@ -15,7 +15,7 @@
 	<br>
 	<md-input-container flex>
 		<label>Artist Name</label>
-		<input name="artistName" ng-model="album.album_artist" required></input>
+		<input name="artistName" ng-model="album.album_artist" required/>
 		<div ng-messages="newAlbumForm.artistName.$error" ng-show="newAlbumForm.artistName.$touched">
 			<div ng-message="required">This is required!</div>
 		</div>

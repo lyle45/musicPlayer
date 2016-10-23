@@ -1,4 +1,4 @@
-var app = angular.module('musicPlayer', ['ngMaterial', 'ngMessages', 'ngResource', 'ngAnimate'])
+var app = angular.module('musicPlayer', ['ngMaterial', 'ngMessages', 'ngResource', 'ngAnimate']);
 app.config(['$httpProvider', '$mdThemingProvider', function ($httpProvider, $mdThemingProvider) {
     $httpProvider.interceptors.push(function () {
         return {

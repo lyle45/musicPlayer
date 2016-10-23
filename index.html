@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="musicPlayer">
 <head>
-    <title>My Music Player</title>
+    <title ng-if="!$root.playingAlbum">My Music Player</title>
+    <title ng-if="$root.playingAlbum">NOW PLAYING - {{$root.playingAlbum.playlist[$root.playedTrackIndex].song_title | uppercase}} BY {{$root.playingAlbum.album_artist | uppercase}}</title>
     <!-- css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="bower_components/Arctext.js/css/style.css">
-    <link rel="stylesheet" href="resources/css/custom.css">
+    <link rel="stylesheet" href="app.css">
 
     <!-- bower components scripts -->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
@@ -21,21 +22,21 @@
     <script type="text/javascript" src="bower_components/Arctext.js/js/jquery.arctext.js"></script>
     <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
     <!-- angular app.js -->
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="app.js"></script>
     <!-- angular components -->
     <script type="text/javascript" src="components/toolbar/toolbar.js"></script>
     <script type="text/javascript" src="components/newAlbumFormsContainer/newAlbumFormsContainer.js"></script>
-    <script type="text/javascript" src="components/newAlbumForm/newAlbumForm.js"></script>
-    <script type="text/javascript" src="components/newTracksForm/newTracksForm.js"></script>
+    <script type="text/javascript" src="components/newAlbumFormsContainer/newAlbumForm/newAlbumForm.js"></script>
+    <script type="text/javascript" src="components/newAlbumFormsContainer/newTracksForm/newTracksForm.js"></script>
     <script type="text/javascript" src="components/albumsContainer/albumsContainer.js"></script>
-    <script type="text/javascript" src="components/album/album.js"></script>
+    <script type="text/javascript" src="components/albumsContainer/album/album.js"></script>
     <script type="text/javascript" src="components/musicPlayer/musicPlayer.js"></script>
     <!-- angular services -->
-    <script type="text/javascript" src="js/logic/albumsResource.js"></script>
+    <script type="text/javascript" src="services/albumsResource.js"></script>
     <!-- angular directives -->
-    <script type="text/javascript" src="js/logic/arcTextDirective.js"></script>
+    <script type="text/javascript" src="services/arcTextDirective.js"></script>
 </head>
-<body class="" ng-app="musicPlayer">
+<body>
 <toolbar></toolbar>
 <music-player ng-if="$root.playingAlbum" playing-album="$root.playingAlbum"></music-player>
 <albums-container class="container"></albums-container>

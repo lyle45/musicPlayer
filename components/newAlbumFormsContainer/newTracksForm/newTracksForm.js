@@ -8,6 +8,6 @@ app.directive('newTracksForm',  function(){
 		},
 		require: '^newAlbumFormsContainer',
 		restrict: 'E',
-		templateUrl: 'components/newTracksForm/newTracksForm.html'
+		templateUrl: 'components/newAlbumFormsContainer/newTracksForm/newTracksForm.html'
 	};
 });

@@ -27,4 +27,4 @@ getPlaylist: function(albumId){
 	});
 }
 }
-}])
+}]);
