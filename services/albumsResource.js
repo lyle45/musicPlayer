@@ -1,5 +1,5 @@
 app.service('albumsResource', ['$resource', function($resource){
-	var albumsArray = $resource('./data/albums.json').query();
+	var albumsArray = $resource('./data/generatedAlbums.json').query();
 	return {
 		getAlbums: function() {
 			return albumsArray;
