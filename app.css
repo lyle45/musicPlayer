@@ -13,7 +13,10 @@ albums-container .album {
     position: relative;
     margin: 30px 25px;
     cursor: pointer;
-    outline: none;
+}
+
+albums-container .album:focus {
+    outline:none
 }
 
 albums-container .album:hover {
